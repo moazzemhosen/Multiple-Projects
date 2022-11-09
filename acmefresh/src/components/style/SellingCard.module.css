@@ -1,0 +1,23 @@
+.container{
+    padding: 2%;
+    border: 1px solid red;
+}
+.category{
+font-weight: bold;
+}
+.details{
+
+}
+.price{
+display: flex;
+justify-content: space-between;
+}
+.bestprice{
+    text-decoration: line-through;
+}
+.sellingprice{
+
+}
+.cart{
+
+}

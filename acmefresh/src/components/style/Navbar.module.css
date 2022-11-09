@@ -1,0 +1,17 @@
+.container{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items:center;
+    background-color: #f1cf69;
+    
+    font-weight: bold;
+    
+    
+    
+}
+.container>a{
+    text-decoration: none;
+    color: white;
+}
