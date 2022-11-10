@@ -1,17 +1,24 @@
 .container{
-    border: 1px solid red;
+
     display: flex;
     justify-content: space-around;
     height: 50px;
+    width: 100%;
     align-items:center;
-    background-color: #f1cf69;
+    /* background-color: #f1cf69; */
     
     font-weight: bold;
+    position: sticky;
+    border: 1px solid red;
     
     
     
 }
+.fixed_color{
+    background-color: #f1cf69;
+}
+
 .container>a{
     text-decoration: none;
-    color: white;
+    color: black;
 }

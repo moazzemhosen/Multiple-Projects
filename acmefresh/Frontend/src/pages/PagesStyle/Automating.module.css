@@ -1,0 +1,17 @@
+.container{
+    width: 80%;
+    margin: auto;
+    /* height: 100vh; */
+    background-color: black;
+    background-image: linear-gradient(to right, black , rgb(124, 121, 121));
+    /* position: absolute; */
+    
+}
+.heading{ 
+    color: rgb(250, 250, 250);
+}
+.border{
+    
+    padding: 10px;
+    
+}

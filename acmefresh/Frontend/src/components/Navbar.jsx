@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from "./style/Navbar.module.css"
 
 const Navbar = () => {
+
+ 
+   
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () =>{
+    console.log(window.scrollY);
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
   return (
     <div className={style.container}>
        <Link to="/"><div>Home</div></Link>

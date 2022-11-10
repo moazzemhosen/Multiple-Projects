@@ -1,0 +1,27 @@
+.container{
+    height: 20%;
+    width: 90%;
+    margin: auto;
+    border: 1px solid white;
+    margin-top: 8%;
+    padding: 10px;
+    border-radius: 8px;
+    
+
+}
+.container:nth-child(even)>.imagediv{
+background-color: red;
+right:15%
+}
+.imagediv{
+    border: 10px solid white;
+    width: 20%;
+    height: 25%;
+    position: absolute;
+    margin: -5% 1%;
+
+}
+.content{
+    margin-top: 9%;
+    color: white;
+}
