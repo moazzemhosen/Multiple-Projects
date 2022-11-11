@@ -4,21 +4,25 @@ import Intro from '../components/AutomatingComponents/Intro'
 import Description from '../components/AutomatingComponents/Description'
 import Instrument from '../components/AutomatingComponents/Instrument'
 import ConstPros from '../components/AutomatingComponents/ConstPros'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getautomaticfarm } from '../Redux/AppReducer/action'
 
 const AutomatingFarm = () => {
-  var arr=[]
-  for(var i=0;i<5;i++){
-    arr.push(i)
-  }
+  const dispatch=useDispatch()
+  const data = useSelector((state) => state.AppReducer.AUTOMATINGFARM);
+ useEffect(()=>{
+dispatch(getautomaticfarm())
+ },[])
   return (
     <div className={style.container}>
       <Intro/>
       <Description/>
       <div className={style.border}>
-      <h3 className={style.heading}>Instrument</h3>
+      <h3 className={style.heading}>Materials & Parts List</h3>
       </div>
-      {arr.map((e)=>{
-        return <Instrument/>
+      {data.map((e)=>{
+        return <Instrument key={e.id} data={e}/>
       })}
       <ConstPros/>
       

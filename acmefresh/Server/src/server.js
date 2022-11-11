@@ -8,8 +8,8 @@ const port =process.env.PORT
 app.listen(port,async()=>{
     try{
       await  connect();
-     return console.log(`it is connect on ${port} `)
-    }catch(er){
-    return console.log(er)
+     return console.log(`Port is connected on ${port}`)
+    }catch(err){
+    return console.log(err)
     }
 })

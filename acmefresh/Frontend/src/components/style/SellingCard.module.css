@@ -1,13 +1,17 @@
 .container{
     padding: 2%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.title{
+    font-weight: bold;
+    color: rgb(70, 187, 47); 
 }
 .category{
 font-weight: bold;
+color: rgb(72, 25, 212);
 }
-.details{
 
-}
 .price{
 display: flex;
 justify-content: space-between;
@@ -15,9 +19,17 @@ justify-content: space-between;
 .bestprice{
     text-decoration: line-through;
 }
-.sellingprice{
-
+.actualprice{
+font-weight: bold;
 }
-.cart{
 
+.discount{
+    font-weight: bold;
+    color: rgb(255, 145, 0);
+}
+.done{
+color: green;
+}
+.add{
+    color: rgb(255, 145, 0);
 }

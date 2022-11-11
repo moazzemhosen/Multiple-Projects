@@ -16,7 +16,7 @@ right:15%
 .imagediv{
     border: 10px solid white;
     width: 20%;
-    height: 25%;
+    height: 20%;
     position: absolute;
     margin: -5% 1%;
 
@@ -24,4 +24,5 @@ right:15%
 .content{
     margin-top: 9%;
     color: white;
+    font-size: 90%;
 }

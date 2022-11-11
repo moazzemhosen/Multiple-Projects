@@ -1,19 +1,31 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { ADD_TO_CART } from '../Redux/AppReducer/actionType';
 import style from "./style/SellingCard.module.css"
 
-const SellingCard = () => {
+const SellingCard = ({data}) => {
+  const cartdata=useSelector(state=>state.AppReducer.CART)
+  const dispatch=useDispatch();
+  const handleadd=(data)=>{
+       //console.log(data)
+       dispatch({type:ADD_TO_CART,payload:data})
+  }
+ 
   return (
     <div className={style.container}>
-        <img width={"100%"} src="https://images.unsplash.com/photo-1511941923513-f7749910f91d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dmVnaXRhYmxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-        <div className={style.category}>Category</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, expedita.</div>
+        <img width={"100%"} height={"200px"} src={data.img}alt="" />
+        <div className={style.title}>{data.title}</div>
+        <div className={style.category}>{data.category}</div>
         <div className={style.price}>
-            <div className={style.bestprice}>RS:-22222</div>
-            <div> Rs:-1111</div>
+            <div className={style.bestprice}>RS:-{data.bestprice}</div>
+            <div className={style.actualprice}> Rs:-{data.actualprice}</div>
         </div>
-        <div>
-            <button>Buy Now</button>
-        </div>
+            {data.discount ?<div className={style.discount}>Discount:-{data.discount}</div>:""}
+       {!cartdata.includes(data) ? <div>
+            <button className={style.add} onClick={()=>{handleadd(data)}}>Add to Cart</button>
+        </div>:<div>
+            <button className={style.done}>Added</button>
+        </div>}
     </div>
 
   )
