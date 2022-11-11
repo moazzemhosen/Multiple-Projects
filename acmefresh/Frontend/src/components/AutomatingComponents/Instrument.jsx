@@ -2,7 +2,7 @@ import React from 'react'
 import style from "./style/Instrument.module.css"
 
 const Instrument = ({data}) => {
-  console.log("dd",data);
+ // console.log("dd",data);
   return (
     <div className={style.container}>
     <div className={style.imagediv}>

@@ -7,19 +7,23 @@ import { sellingdirectily } from "../Redux/AppReducer/action";
 import style from "./PagesStyle/SellingDirectly.module.css";
 
 const SellingDirecly = () => {
-  const[discount,setDiscount]=useState(false)
-  // const[category,setCategoey]=useState("")
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.AppReducer.SELLINGDIRECTELY);
-  const [stable,setStable]=useState([...data])
-  //console.log(stable);
+  
 
+  const dispatch = useDispatch();
+// calling data from Redux store for renddering SELLINGDIRECTELY data
+  const data = useSelector((state) => state.AppReducer.SELLINGDIRECTELY);
+
+  const [stable,setStable]=useState([...data])
+  
+//when filter when filter  applied
   const handleCategory=(e)=>{
     e.preventDefault()
     var input=e.target.value;
     var data1=data.filter((e)=>e.category===input)
     setStable(data1)
   }
+  
+  //when filter when discount checkbox applied
   const handleDiscount=(e)=>{
    console.log(e.target.checked)
    if(e.target.checked){
